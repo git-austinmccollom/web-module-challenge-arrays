@@ -103,7 +103,7 @@ function getFlavorByIndex(array, index){
     return flavor;
 }
 
-console.log(getFlavorByIndex(flavorsThree, 30));
+console.log(getFlavorByIndex(flavorsThree, 15));
 
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
@@ -118,12 +118,19 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
-
-    /*code here*/
-
+function removeFlavorByName(array, stringFlavor){
+    let spreadArray = [...array];
+    for ( i = 0; i < spreadArray.length; i++ ) {
+        if ( spreadArray[i] === stringFlavor) {
+            spreadArray.splice(i, 1);
+            i--;
+        }
+    }
+    return spreadArray;
 }
 
+let vanillaRemoved = removeFlavorByName(originalFlavors, 'Vanilla');
+console.log(vanillaRemoved);
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
