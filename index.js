@@ -179,7 +179,8 @@ console.log(filterByWord(originalFlavors, 'chocolate'))
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
-/* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
+/* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, 
+but can test with originalFlavors.
 
 Your function should accept: 
 
@@ -189,12 +190,28 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
+// function getAverageWordLength(array){
+//     let numberWordsPerItem = [];
+//     for ( i = 0; i < array.length; i++ ) {
+//         let item = array[i].trim(); // clean the item
+//         let wordLength = 0; // declare a counter for the number of words in the item
+//         for ( x = 0; x < item.length; x++ ) { // iterate over every character in the item
+//             if ( item[x] === ' ' ) { // increase the counter wordLength every time you find a space, presuming it is between two words
+//                 wordLength++;
+//                 // console.log(wordLength);
+//             }
+//             wordLength++; //increase the count by one for the last word. A space indicates a word was behind it, but there is no space behind the last word.
+//         }
+//         numberWordsPerItem.push(wordLength); // store the number of words from that item into a value in the array
+//     }
+//     console.log(numberWordsPerItem);
+    
+//     let averageWordsPerItem = numberWordsPerItem.reduce()
 
-    /*code here*/
 
-}
-
+//     return averageWordsPerItem;
+// }
+// console.log(getAverageWordLength(originalFlavors));
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
